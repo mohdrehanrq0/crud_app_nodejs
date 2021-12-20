@@ -16,7 +16,7 @@ $('#update_user').submit(function(e){
     console.log(data);
 
     var request = {
-        "url": `http://localhost:8080/api/users/${data.id}`,
+        "url": `https://crud-mrq-node.herokuapp.com/api/users/${data.id}`,
         "method": "PUT",
         "data": data
     }
@@ -33,7 +33,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id");
 
         var request = {
-            "url": `http://localhost:8080/api/users/${id}`,
+            "url": `https://crud-mrq-node.herokuapp.com/api/users/${id}`,
             "method": "DELETE"
         }
 

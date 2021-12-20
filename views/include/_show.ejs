@@ -1,0 +1,37 @@
+ <% var i = 0; %>
+<% data.forEach(e => { %>
+  <% i = i + 1; %>
+<tr>
+    <td class="p-2 whitespace-nowrap">
+      <div class="text-left"><%= i %></div>
+    </td>
+    <td class="p-2 whitespace-nowrap">
+      <div class="text-left"><%= e.name %> </div>
+    </td>
+    <td class="p-2 whitespace-nowrap">
+      <div class="text-left"><%= e.email %> </div>
+    </td>
+    <td class="p-2 whitespace-nowrap">
+      <div class="text-left"><%= e.gender %> </div>
+    </td>
+    <td class="p-2 whitespace-nowrap">
+      <% if (e.status == "active") { %>
+        <div class="text-center rounded-full text-green-800 bg-green-200 p-1">Active</div>
+      <% }else if (e.status == "inactive"){ %>
+        <div class="text-center rounded-full text-red-800 bg-red-200 p-1">Deactive</div>
+      <% } %>
+    </td>
+    <td class="p-2 whitespace-nowrap">
+      <a href="/updateuser?id=<%= e._id %> "
+        class="inline-flex text-white bg-cyan-500 border-0 py-2 px-2 focus:outline-none hover:bg-cyan-600 rounded text-sm">
+        Edit 
+      </a>
+      <a href="javascript:void(0)"
+        class="inline-flex text-white bg-red-500 border-0 py-2 px-2 focus:outline-none hover:bg-red-600 rounded text-sm" id="delete_btn" data-id="<%= e._id %>">
+        Delete
+      </a>
+    </td>
+  </tr>
+
+  <% }) %>
+  

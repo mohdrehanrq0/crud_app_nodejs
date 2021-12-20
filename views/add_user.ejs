@@ -1,0 +1,38 @@
+
+<!-- include header  -->
+<%- include('include/_header') %> 
+
+  <!-- main section start here  -->
+  <div class="container m-auto py-10">
+
+    <div class="table_wrapper">
+      <section class="antialiased bg-gray-100 text-gray-600 px-4">
+        <div class="flex flex-col justify-center h-full">
+          <!-- Table -->
+          <div class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+            <header class="px-5 py-4 border-b border-gray-100 flex justify-between">
+                <a href="/"
+                  class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-sm">
+                  Back
+                </a>
+                <h1 class="text-xl text-center">Add User</h1>
+                </header>
+            <div class="w-full ">
+                <br />
+                
+                <!-- include form  -->
+                <%- include('include/_form') %> 
+
+                <p class="text-center text-gray-500 text-xs">
+                  &copy;2021 Mohd Rehan Qureshi. All rights reserved.
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- main section end here  -->
+
+<!-- include footer  -->
+<%- include('include/_footer') %> 
